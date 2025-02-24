@@ -10,4 +10,5 @@
 <script setup>
 import TheBar from "./components/TheBar.vue";
 import TheFilm from "./components/TheFilm.vue";
+import TheModal from "./components/TheModal.vue";
 </script>
