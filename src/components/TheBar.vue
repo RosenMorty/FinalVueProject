@@ -20,26 +20,32 @@
       />
     </div>
     <h2
-      v-if="authStore.isAuthorized === true"
+      v-if="authStore.isAuthorized"
       class="flex items-center cursor-pointer"
-      @click="authStore.changeRegistr"
+      @click="authStore.changeRegistr()"
+      @close="modalStore.closeModal()"
     >
       Выйти
     </h2>
     <h2
       v-else
       class="flex items-center cursor-pointer"
-      @click="authStore.changeRegistr"
+      @click="
+        authStore.changeRegistr();
+        modalStore.openModal();
+      "
     >
       Войти
     </h2>
-    <!-- <TheModal v-if="authStore.isAuthorized === false"></TheModal> -->
+    <TheModal v-if="modalStore.isOpen"></TheModal>
   </header>
 </template>
 
 <script setup>
 import { useAuthStore } from "../stores/auth";
+import { useModalStore } from "../stores/modal";
 import TheModal from "./TheModal.vue";
 
 const authStore = useAuthStore();
+const modalStore = useModalStore();
 </script>

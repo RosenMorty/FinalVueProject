@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#0a192b] from-gray-900 to-gray-800 text-white p-6 rounded-lg flex gap-6 w-[1440px] h-[600px] mx-auto"
+    class="bg-[#0a192b] from-gray-900 to-gray-800 text-white p-6 flex gap-6 w-[1440px] h-[600px] mx-auto"
   >
     <!-- Левая часть с текстом -->
     <div class="flex-1 space-y-3 flex flex-col justify-center ml-[80px]">

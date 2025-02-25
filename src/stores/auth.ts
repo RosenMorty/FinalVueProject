@@ -9,5 +9,13 @@ export const useAuthStore = defineStore("auth", () => {
     console.log("Текущее значение isRegistr:", isAuthorized.value);
   };
 
-  return { isAuthorized, changeRegistr };
+  const authFalse = () => {
+    isAuthorized.value = false;
+  };
+
+  const authTrue = () => {
+    isAuthorized.value = true;
+  };
+
+  return { isAuthorized, changeRegistr, authFalse, authTrue };
 });
