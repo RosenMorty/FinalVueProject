@@ -7,7 +7,7 @@ export const useModalStore = defineStore("modal", () => {
   const openModal = () => (isOpen.value = true);
   const closeModal = () => (isOpen.value = false);
 
-  console.log(isOpen.value);
+  console.log("работате", isOpen.value);
 
   return { isOpen, openModal, closeModal };
 });

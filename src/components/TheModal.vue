@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="modalStore.isOpen"
     class="w-[420px] h-[380px] bg-white text-black absolute top-1/2 left-1/2 -translate-x-1/2 rounded-[24px] gap-[40px] pt-[20px] pr-[40px] pb-[64px] pl-[40px] shadow-lg mt-[100px]"
   >
     <div
@@ -56,7 +57,7 @@ import { useAuthStore } from "../stores/auth";
 import { useModalStore } from "../stores/modal";
 import { useRegistrationStore } from "@/stores/registration";
 
+const registrationStore = useRegistrationStore();
 const authStore = useAuthStore();
 const modalStore = useModalStore();
-const registrationStore = useRegistrationStore();
 </script>

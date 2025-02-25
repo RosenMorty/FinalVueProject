@@ -38,6 +38,7 @@
       Войти
     </h2>
     <TheModal v-if="modalStore.isOpen"></TheModal>
+    <TheRegistration v-if="registrationStore.isRegistration"></TheRegistration>
   </header>
 </template>
 
@@ -45,6 +46,10 @@
 import { useAuthStore } from "../stores/auth";
 import { useModalStore } from "../stores/modal";
 import TheModal from "./TheModal.vue";
+import TheRegistration from "./TheRegistration.vue";
+import { useRegistrationStore } from "@/stores/registration";
+
+const registrationStore = useRegistrationStore();
 
 const authStore = useAuthStore();
 const modalStore = useModalStore();
